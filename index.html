@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>raj gurung</title>
+<meta name="description" content="portfolio of raj gurung, bim student and aspiring python backend developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f3efe4;
+    --card: #fdfbf5;
+    --ink: #2b2530;
+    --muted: #7a7480;
+    --line: #dcd5c6;
+    --accent: #b0408f;
+    --shadow: 0 10px 40px rgba(60, 45, 30, 0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 15px;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; transition: text-decoration-color .2s; }
+  a:hover { text-decoration-color: var(--ink); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  header { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; }
+  .brand { font-family: "DM Sans", sans-serif; font-size: 20px; font-weight: 500; text-decoration: none; }
+  .brand span { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); margin-right: 10px; vertical-align: -1px; box-shadow: 0 0 0 4px rgba(176,64,143,.15); }
+  .mail { font-size: 13px; color: var(--muted); }
+
+  .hero { padding: 90px 0 80px; border-bottom: 1px solid var(--line); }
+  h1 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    font-size: clamp(40px, 8vw, 76px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    max-width: 14em;
+  }
+  .hero p { margin-top: 32px; color: var(--muted); max-width: 34em; }
+
+  section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+  .label { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 36px; }
+  .label b { color: var(--accent); font-weight: 500; margin-right: 12px; }
+
+  .card {
+    background: var(--card);
+    border-radius: 28px;
+    padding: 44px;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 44px;
+    border: 1px solid rgba(220,213,198,.5);
+  }
+  .card h2 { font-family: "DM Sans", sans-serif; font-weight: 400; font-size: 32px; letter-spacing: -.01em; }
+  .card .tag { font-family: "DM Sans", sans-serif; font-size: 19px; margin: 18px 0 14px; line-height: 1.5; }
+  .card p { color: var(--muted); font-size: 14px; }
+  .card .links { margin-top: 26px; display: flex; gap: 22px; flex-wrap: wrap; font-size: 14px; }
+  .shot {
+    border-radius: 18px;
+    min-height: 220px;
+    background: repeating-linear-gradient(135deg, #ece6d6, #ece6d6 12px, #f1ecdd 12px, #f1ecdd 24px);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 13px; text-align: center; padding: 20px;
+  }
+
+  .row { display: grid; grid-template-columns: 180px 1fr auto; gap: 24px; padding: 22px 0; border-top: 1px solid var(--line); align-items: baseline; }
+  .row:last-child { border-bottom: 1px solid var(--line); }
+  .row .name { font-family: "DM Sans", sans-serif; font-size: 18px; }
+  .row .desc { color: var(--muted); font-size: 14px; }
+  .row .meta { color: var(--muted); font-size: 12px; text-align: right; }
+
+  .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
+  .col { border-top: 1px solid var(--ink); padding-top: 18px; }
+  .col h3 { font-family: "DM Sans", sans-serif; font-weight: 400; font-size: 22px; }
+  .col .role { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 6px 0 14px; }
+  .col p { color: var(--muted); font-size: 14px; }
+
+  footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; padding: 36px 0 56px; font-size: 12px; color: var(--muted); }
+
+  @media (max-width: 760px) {
+    .card { grid-template-columns: 1fr; padding: 28px; gap: 28px; }
+    .row { grid-template-columns: 1fr; gap: 4px; }
+    .row .meta { text-align: left; }
+    .cols { grid-template-columns: 1fr; }
+    .hero { padding: 60px 0 56px; }
+    section { padding: 56px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="brand" href="#"><span></span>raj gurung</a>
+    <a class="mail" href="mailto:your-email@example.com">your-email@example.com</a>
+  </header>
+
+  <div class="hero">
+    <h1>[your headline goes here, lowercase and quiet.]</h1>
+    <p>[1 to 2 sentences about you. e.g. bim student in kathmandu, learning python backend and heading toward ml and llm engineering.]</p>
+  </div>
+
+  <section>
+    <div class="label"><b>01</b>now building</div>
+    <div class="card">
+      <div>
+        <h2>[project name]</h2>
+        <div class="tag">[one-line description of the project.]</div>
+        <p>[2 to 3 lines: what it does, who it is for, what you used to build it.]</p>
+        <div class="links">
+          <a href="#">github &rarr;</a>
+          <a href="#">live demo &rarr;</a>
+        </div>
+      </div>
+      <div class="shot">[screenshot or image of the project]</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label"><b>02</b>other work</div>
+    <div class="row">
+      <div class="name">[project two]</div>
+      <div class="desc">[short description.]</div>
+      <div class="meta"><a href="#">github</a></div>
+    </div>
+    <div class="row">
+      <div class="name">[project three]</div>
+      <div class="desc">[short description.]</div>
+      <div class="meta"><a href="#">github</a></div>
+    </div>
+    <div class="row">
+      <div class="name">[project four]</div>
+      <div class="desc">[short description.]</div>
+      <div class="meta"><a href="#">github</a></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label"><b>03</b>about</div>
+    <div class="cols">
+      <div class="col">
+        <h3>education</h3>
+        <div class="role">where i study</div>
+        <p>[your degree, college, and years.]</p>
+      </div>
+      <div class="col">
+        <h3>skills</h3>
+        <div class="role">what i work with</div>
+        <p>[python, sql, git, and whatever else you want to list.]</p>
+      </div>
+      <div class="col">
+        <h3>heading toward</h3>
+        <div class="role">what's next</div>
+        <p>[your goals, in a line or two.]</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-bottom:none">
+    <div class="label"><b>04</b>say hi</div>
+    <p>[a friendly line inviting people to reach out.]</p>
+    <p style="margin-top:18px">
+      <a href="mailto:your-email@example.com">email</a> &nbsp;·&nbsp;
+      <a href="https://github.com/raj-grg">github</a> &nbsp;·&nbsp;
+      <a href="#">linkedin</a>
+    </p>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 raj gurung</span>
+    <span>kathmandu, nepal</span>
+  </footer>
+
+</div>
+</body>
+</html>
